@@ -6,7 +6,13 @@ namespace Pet_LinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var list = new Model.LinkedList<int>();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            list.Add(4);
+
+            Console.ReadLine();
         }
     }
 }
