@@ -19,31 +19,35 @@ namespace Pet_LinkedList.Model
         }
         public LinkedList(T data)
         {
-            var item = new Item<T>(data);
-            SetHeadAndTail(item);
+            SetHeadAndTail(data);
         }
 
 
         public void Add(T data) 
         {
-            var item = new Item<T>(data);
-
             if (Tail != null)
             {
+                var item = new Item<T>(data);
                 Tail.Next = item;
                 Tail = item;
                 Count++;
             }
             else 
             {
-                SetHeadAndTail(item);
+                SetHeadAndTail(data);
             }
 
         }
 
-        private void SetHeadAndTail(Item<T> item) 
+        public void Delete() 
         {
-            Tail.Next = item;
+            
+        }
+
+        private void SetHeadAndTail(T data) 
+        {
+            var item = new Item<T>(data);
+            Head = item;
             Tail = item;
             Count=1;
         }
