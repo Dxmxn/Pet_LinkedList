@@ -11,6 +11,13 @@ namespace Pet_LinkedList
             list.Add(2);
             list.Add(3);
             list.Add(4);
+            list.Add(5);
+            list.Add(6);
+            list.Add(7);
+            list.Add(8);
+            list.Delete(3);
+            list.Delete(1);
+            list.Delete(10);
 
             Console.ReadLine();
         }

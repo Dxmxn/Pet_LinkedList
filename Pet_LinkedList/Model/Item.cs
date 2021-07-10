@@ -24,7 +24,7 @@ namespace Pet_LinkedList.Model
         public Item<T> Next { get; set; }
         public Item(T Data)
         {
-            Data = data;
+            data = Data;
         }
 
         public override string ToString()

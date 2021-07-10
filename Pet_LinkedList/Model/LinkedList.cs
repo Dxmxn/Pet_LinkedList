@@ -39,9 +39,30 @@ namespace Pet_LinkedList.Model
 
         }
 
-        public void Delete() 
+        public void Delete(T data) 
         {
-            
+            if (Head != null) 
+            {
+                if (Head.Data.Equals(data)) 
+                {
+                    Head = Head.Next;
+                    Count--;
+                    return;
+                }
+                var current = Head.Next;
+                var previous = Head;
+                while(current.Next != null) 
+                {
+                    if (current.Data.Equals(data)) 
+                    {
+                        previous.Next = current.Next;
+                        Count--;
+                        return;
+                    }
+                    previous = current;
+                    current = current.Next;
+                }
+            }
         }
 
         private void SetHeadAndTail(T data) 
