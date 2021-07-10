@@ -23,6 +23,7 @@ namespace Pet_LinkedList.Model
             SetHeadAndTail(item);
         }
 
+
         public void Add(T data) 
         {
             var item = new Item<T>(data);
