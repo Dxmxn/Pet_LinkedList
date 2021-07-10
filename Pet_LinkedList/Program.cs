@@ -15,10 +15,32 @@ namespace Pet_LinkedList
             list.Add(6);
             list.Add(7);
             list.Add(8);
+
+            foreach (var item in list) 
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine("");
+            list.AppendHead(4);
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
             list.Delete(3);
             list.Delete(1);
             list.Delete(10);
-
+            foreach (var item in list) 
+            {
+                Console.Write(item + " ");
+            }
+            list.InsertAfter(2, 8);
+            Console.WriteLine();
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
             Console.ReadLine();
         }
     }
