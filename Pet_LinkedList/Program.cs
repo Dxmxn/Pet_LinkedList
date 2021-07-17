@@ -49,6 +49,7 @@ namespace Pet_LinkedList
             */
             #endregion
             #region DoublyConnectedList
+            /*
             var doublyConnectedList = new DoublyConnectedList<int>();
 
             doublyConnectedList.Add(1);
@@ -78,6 +79,33 @@ namespace Pet_LinkedList
             }
 
             Console.ReadLine();
+            */
+            #endregion
+            #region CircularList
+
+            var circularList = new CircularLinkedList<int>();
+            circularList.Add(1);
+            circularList.Add(2);
+            circularList.Add(3);
+            circularList.Add(4);
+            circularList.Add(5);
+
+            foreach (var item in circularList) 
+            {
+                Console.WriteLine(item);
+            }
+
+            circularList.Delete(3);
+            circularList.Delete(-1);
+            circularList.Delete(10);
+            circularList.Delete(5);
+
+            Console.WriteLine();
+
+            foreach (var item in circularList)
+            {
+                Console.WriteLine(item);
+            }
             #endregion
         }
     }
