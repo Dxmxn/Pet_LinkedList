@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pet_LinkedList.Model;
+using System;
 
 namespace Pet_LinkedList
 {
@@ -6,6 +7,8 @@ namespace Pet_LinkedList
     {
         static void Main(string[] args)
         {
+            #region LinkedList
+            /*
             var list = new Model.LinkedList<int>();
             list.Add(1);
             list.Add(2);
@@ -15,6 +18,7 @@ namespace Pet_LinkedList
             list.Add(6);
             list.Add(7);
             list.Add(8);
+            
 
             foreach (var item in list) 
             {
@@ -42,6 +46,39 @@ namespace Pet_LinkedList
             }
             Console.WriteLine();
             Console.ReadLine();
+            */
+            #endregion
+            #region DoublyConnectedList
+            var doublyConnectedList = new DoublyConnectedList<int>();
+
+            doublyConnectedList.Add(1);
+            doublyConnectedList.Add(2);
+            doublyConnectedList.Add(3);
+            doublyConnectedList.Add(4);
+            doublyConnectedList.Add(5);
+            doublyConnectedList.Add(6);
+
+            foreach (var item in doublyConnectedList) 
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            doublyConnectedList.Delete(3);
+            doublyConnectedList.Delete(7);
+            doublyConnectedList.Delete(-5);
+            foreach (var item in doublyConnectedList)
+            {
+                Console.WriteLine(item);
+            }
+            var reverse = doublyConnectedList.Reverse();
+            Console.WriteLine();
+            foreach (var item in reverse)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadLine();
+            #endregion
         }
     }
 }
